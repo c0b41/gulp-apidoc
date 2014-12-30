@@ -1,6 +1,6 @@
 {
   "name": "gulp-apidoc",
-  "version": "0.0.3",
+  "version": "0.1.1",
   "description": " RESTful web API Documentation Generator",
   "main": "index.js",
   "scripts": {
