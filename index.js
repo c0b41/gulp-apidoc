@@ -12,10 +12,10 @@ module.exports ={
 
 		if(options.src){
 
-		var countFiles = apidoc(options);	
-
-			if(typeof countFiles === "number"){
-				gutil.log('gulp-apidoc:', gutil.colors.green(countFiles) + gutil.colors.gray(' file by reading the file was created '));
+		var chunk = apidoc.createDoc(options);	  
+			
+			if(typeof chunk === "object"){
+				gutil.log('gulp-apidoc:', gutil.colors.green('Apidoc created...   [  '+ JSON.parse(chunk.project).name ) +'  ] ');
 				
 			}else{
 				throw new gutil.PluginError('gulp-apidoc', 'Execution terminated (set \" debug: true \" in gulpfile.js for details. ')
