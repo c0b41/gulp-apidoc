@@ -1,4 +1,4 @@
-# [gulp](https://github.com/wearefractal/gulp)-apidoc [![Build Status](https://travis-ci.org/cobaimelan/gulp-apidoc.png?branch=master)](https://travis-ci.org/cobaimelan/gulp-apidoc)
+# [gulp](https://github.com/gulpjs/gulp)-apidoc [![Build Status](https://img.shields.io/david/ayhankuru/gulp-apidoc.svg?style=flat-square)](https://david-dm.org/ayhankuru/gulp-apidoc)
 
 
 > Generates a RESTful web API Documentation.
