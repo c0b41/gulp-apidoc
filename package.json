@@ -1,6 +1,6 @@
 {
   "name": "gulp-apidoc",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": " RESTful web API Documentation Generator",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/cobaimelan/gulp-apidoc",
   "dependencies": {
-    "apidoc": "^0.12.3",
+    "apidoc": "^0.13.1",
     "gulp-util": "^3.0.4"
   },
   "devDependencies": {
