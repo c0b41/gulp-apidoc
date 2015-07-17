@@ -55,6 +55,7 @@ gulp.task('apidoc',function(){
               apidoc.exec({
 	              src: "example/",
                   dest: "build/",
+                  template: "template/",
                   debug: true,
                   includeFilters: [ ".*\\.js$" ]
               });
@@ -76,8 +77,12 @@ Type: `String`
 
 #### options.dest
 
-Type: `string`
+Type: `String`
 Default: `doc/`
+
+#### options.template
+
+Type: `String`
 
 #### options.debug
 
