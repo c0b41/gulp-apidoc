@@ -37,11 +37,11 @@ npm install --save-dev gulp-apidoc
 var gulp = require('gulp'),
     apidoc = require('gulp-apidoc');
 
-gulp.task('apidoc', function(){
-          apidoc.exec({
+gulp.task('apidoc', function(done){
+          apidoc({
             src: "example/",
             dest: "build/"
-          });
+          },done);
 });
 ```
 
@@ -52,17 +52,17 @@ var gulp = require('gulp'),
     apidoc = require('gulp-apidoc');
 
 gulp.task('apidoc',function(){
-              apidoc.exec({
+              apidoc({
 	              src: "example/",
                   dest: "build/",
                   template: "template/",
                   debug: true,
                   includeFilters: [ ".*\\.js$" ]
-              });
+              },done);
 });
 ```
 
-Other options [checkout](https://github.com/apidoc/apidoc/blob/master/lib/apidoc.js#L15).
+Other options [checkout](https://github.com/apidoc/apidoc/blob/master/lib/index.js#L14-L21).
 
 
 ## API
@@ -84,12 +84,17 @@ Default: `doc/`
 
 Type: `String`
 
+#### options.config
+
+Type: `String`
+Default: `options.src`
+
 #### options.debug
 
 Type: `Boolean`
 Default: `false`
 
-#### options.log
+#### options.silent
 
 Type: `Boolean`
 Default: `true`
