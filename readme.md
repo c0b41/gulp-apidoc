@@ -51,7 +51,7 @@ With options:
 var gulp = require('gulp'),
     apidoc = require('gulp-apidoc');
 
-gulp.task('apidoc',function(){
+gulp.task('apidoc',function(done){
               apidoc({
 	              src: "example/",
                   dest: "build/",
