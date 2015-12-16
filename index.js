@@ -1,13 +1,13 @@
 'use strict';
 
 var gutil = require('gulp-util');
-var _  = require('lodash');
+var objectAssign = require('object-assign');
 var apidoc = require('apidoc');
 var pname = require('./package.json').name;
 
 module.exports = function(opt,done) {
 
-	var _opt = _.extend({dest: 'doc/',o:'doc/',silent:true},opt);
+	var _opt = objectAssign({dest: 'doc/',o:'doc/',silent:true},opt);
 
 	_opt.src = _opt.src || _opt.i;
 	_opt.dest = _opt.dest || _opt.o ;
