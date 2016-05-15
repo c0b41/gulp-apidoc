@@ -3,10 +3,25 @@
 var gutil = require('gulp-util');
 var objectAssign = require('object-assign');
 var apidoc = require('apidoc');
+var forEachAsync = require('forEachAsync').forEachAsync;
 var pname = require('./package.json').name;
 
 module.exports = function(opt,done) {
 
+	 if(!isNaN(opt.length)){
+		 forEachAsync(opt, function (next, element, index, array) {
+			 apiDocCreater(element,next);
+		  }).then(function () {
+		    done();
+		  });
+	 } else {
+		apiDocCreater(opt,done);
+	 }
+
+}
+
+
+function apiDocCreater(opt,done){
 	var _opt = objectAssign({
 		dest: opt.dest || opt.o || 'doc/',
 		config: opt.config || opt.c || opt.src,
@@ -24,7 +39,7 @@ module.exports = function(opt,done) {
 		var chunk = apidoc.createDoc(_opt);
 
 		if(typeof chunk === 'object') {
-	    	gutil.log(pname, gutil.colors.green('Apidoc created...   [  '+ gutil.colors.cyan(JSON.parse(chunk.project).name) +'  ] '));
+			gutil.log(pname, gutil.colors.green('Apidoc created...   [  '+ gutil.colors.cyan(JSON.parse(chunk.project).name) +'  ] '));
 			done();
 		} else if(chunk === true){
 				gutil.log(pname, gutil.colors.green('Apidoc created... '));
@@ -36,5 +51,4 @@ module.exports = function(opt,done) {
 	}else{
 			done(new gutil.PluginError(pname, 'Folder specified'));
 	}
-
 }
