@@ -5,5 +5,6 @@ gulp.task('default',function(done){
     apidoc({
       src:'./example',
       dest:'./build',
+      debug:true,
     },done);
 });
