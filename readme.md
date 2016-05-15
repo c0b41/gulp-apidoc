@@ -97,7 +97,7 @@ Default: `false`
 #### options.silent
 
 Type: `Boolean`
-Default: `true`
+Default: `false`
 
 #### options.includeFilters
 
