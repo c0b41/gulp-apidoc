@@ -67,7 +67,7 @@ Other options [checkout](https://github.com/apidoc/apidoc/blob/master/lib/index.
 
 ## API
 
-### apidoc(options)
+## apidoc(options)
 
 
 #### options.src
@@ -95,6 +95,16 @@ Type: `Boolean`
 Default: `false`
 
 #### options.silent
+
+Type: `Boolean`
+Default: `false`
+
+#### options.verbose
+
+Type: `Boolean`
+Default: `false`
+
+#### options.simulate
 
 Type: `Boolean`
 Default: `false`
