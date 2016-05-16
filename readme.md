@@ -1,10 +1,12 @@
-# [gulp](https://github.com/gulpjs/gulp)-apidoc [![Build Status](https://img.shields.io/david/ayhankuru/gulp-apidoc.svg?style=flat-square)](https://david-dm.org/ayhankuru/gulp-apidoc)
+# [gulp](https://github.com/gulpjs/gulp)-apidoc 
 
 
-> Generates a RESTful web API Documentation.
-  Documentation at [apidocjs.com](http://apidocjs.com/)
+![npm-version](https://img.shields.io/npm/v/gulp-apidoc.svg)
+![download-count](https://img.shields.io/npm/dm/gulp-apidoc.svg)
+![dev-deps](https://david-dm.org/c0b41/gulp-apidoc.svg)
 
-Uses the [apidoc](https://github.com/apidoc/apidoc) library.
+
+Generates a RESTful web API Documentationusing the [apidoc](https://github.com/apidoc/apidoc) library.
 
 ## How It Works
 `/path/api/stuff.js`:
@@ -65,22 +67,26 @@ gulp.task('apidoc',function(done){
 Other options [checkout](https://github.com/apidoc/apidoc/blob/master/lib/index.js#L14-L21).
 
 
-## API
-
-## apidoc(options)
+## Options
 
 
 #### options.src
+
+The folder to scan for apidoc documentation.
 
 Type: `String`
 
 
 #### options.dest
 
+The folder where to output the generated files.
+
 Type: `String`
 Default: `doc/`
 
 #### options.template
+
+Custom template to use for the output files.
 
 Type: `String`
 
