@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cobaimelan/gulp-apidoc",
   "dependencies": {
-    "apidoc": "^0.16.1",
+    "apidoc": "^0.17.3",
     "gulp-util": "^3.0.7",
     "object-assign": "^4.1.0"
   },
