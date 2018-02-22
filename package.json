@@ -1,11 +1,11 @@
 {
   "name": "gulp-apidoc",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": " RESTful web API Documentation Generator",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cobaimelan/gulp-apidoc"
+    "url": "git://github.com/c0b41/gulp-apidoc"
   },
   "keywords": [
     "gulpplugin",
@@ -17,13 +17,15 @@
   "author": "Ayhan Kuru",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cobaimelan/gulp-apidoc/issues"
+    "url": "https://github.com/c0b41/gulp-apidoc/issues"
   },
-  "homepage": "https://github.com/cobaimelan/gulp-apidoc",
+  "homepage": "https://github.com/c0b41/gulp-apidoc",
   "dependencies": {
+    "ansi-colors": "^1.1.0",
     "apidoc": "*",
-    "gulp-util": "^3.0.8",
-    "object-assign": "^4.1.1"
+    "fancy-log": "^1.3.2",
+    "object-assign": "^4.1.1",
+    "plugin-error": "^1.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.0"

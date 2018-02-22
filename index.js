@@ -1,6 +1,6 @@
-'use strict';
-
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
+var log = require('fancy-log');
+var colors = require('ansi-colors');
 var objectAssign = require('object-assign');
 var apidoc = require('apidoc');
 var pname = require('./package.json').name;
@@ -24,17 +24,17 @@ module.exports = function(opt,done) {
 		var chunk = apidoc.createDoc(_opt);
 
 		if(typeof chunk === 'object') {
-	    	gutil.log(pname, gutil.colors.green('Apidoc created...   [  '+ gutil.colors.cyan(JSON.parse(chunk.project).name) +'  ] '));
+	    	log(pname+' '+ colors.green('Apidoc created...   [  '+ colors.cyan(JSON.parse(chunk.project).name) +'  ] '));
 			done();
 		} else if(chunk === true){
-				gutil.log(pname, gutil.colors.green('Apidoc created... '));
-				done();
+			log(pname+' '+colors.green('Apidoc created... '));
+			done();
 		}else{
-				done(new gutil.PluginError(pname, 'Execution terminated (set \" debug: true \" in gulpfile.js for details. '))
+			done(PluginError(pname, 'Execution terminated (set \" debug: true \" in gulpfile.js for details. '))
 		}
 
 	}else{
-			done(new gutil.PluginError(pname, 'Folder specified'));
+		done(PluginError(pname, 'Folder specified'));
 	}
 
 }
