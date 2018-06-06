@@ -30,11 +30,10 @@ module.exports = function(opt,done) {
 			log(pname+' '+colors.green('Apidoc created... '));
 			done();
 		}else{
-			done(PluginError(pname, 'Execution terminated (set \" debug: true \" in gulpfile.js for details. '))
+			done(new PluginError(pname, 'Execution terminated (set \" debug: true \" in gulpfile.js for details. '))
 		}
 
 	}else{
-		done(PluginError(pname, 'Folder specified'));
+		done(new PluginError(pname, 'Folder specified'));
 	}
-
 }
