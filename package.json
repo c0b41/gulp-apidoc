@@ -3,10 +3,6 @@
   "version": "0.2.8",
   "description": " RESTful web API Documentation Generator",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/c0b41/gulp-apidoc"
-  },
   "keywords": [
     "gulpplugin",
     "apidoc",
@@ -14,15 +10,13 @@
     "rest",
     "doc"
   ],
-  "author": "Ayhan Kuru",
+  "author": "c0b41",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/c0b41/gulp-apidoc/issues"
-  },
   "homepage": "https://github.com/c0b41/gulp-apidoc",
   "dependencies": {
     "ansi-colors": "^1.1.0",
     "apidoc": "*",
+    "apidoc-core": "^0.8.3",
     "fancy-log": "^1.3.2",
     "object-assign": "^4.1.1",
     "plugin-error": "^1.0.1"
