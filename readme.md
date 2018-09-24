@@ -1,3 +1,5 @@
+***this package is no longer supported, use the [webpack plugin](https://github.com/c0b41/webpack-apidoc) instead*** 
+
 # [gulp](https://github.com/gulpjs/gulp)-apidoc 
 
 
